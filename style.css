@@ -28,3 +28,11 @@
 .result{
     display: none;
 }
+
+.navbar-brand{
+    margin-left: 10px;
+}
+
+.navbar-text{
+    margin-right: 10px;
+}
