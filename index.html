@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body>
+    <div class="main justify-content-center">
+        <div class="card">
+            <div class="card-header text-center ">
+                โปรแกรมการคำนวนเกรดอัตโนมัติ
+            </div>
+
+        <div class="card-body">
+
+            <div class="mb-3">
+            <label for="" class="form-label">คะแนนกลางภาค</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="midterm" 
+                    placeholder="กรุณากรอกคะแนนกลางภาค"
+                    min="0" max="30">
+                <div class="form-text" id="basic-addon4">
+                    คะแนนสอบกลางภาคจะสามารถกรอกได้ไม่เกิน 30 คะแนน
+                </div>
+            </div>
+
+            <div class="mb-3">
+            <label for="" class="form-label">คะแนนปลายภาค</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="final" 
+                    placeholder="กรุณากรอกคะแนนปลายภาค"
+                    min="0" max="50">
+                <div class="form-text" id="basic-addon4">
+                    คะแนนสอบปลายภาคจะสามารถกรอกได้ไม่เกิน 50 คะแนน
+                </div>
+            </div>
+
+            <div class="mb-3">
+            <label for="" class="form-label">คะแนนจิตพิสัย</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="other" 
+                    placeholder="กรุณากรอกคะแนนจิตพิสัย"
+                    min="0" max="20">
+                <div class="form-text" id="basic-addon4">
+                    คะแนนจิตพิสัยจะสามารถกรอกได้ไม่เกิน 20 คะแนน
+                </div>
+            </div>
+
+            <div class="text-center">
+                <input 
+                    type="button" 
+                    value="คำนวนเกรด"
+                    class="btn btn-primary"
+                    onclick=grade()>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="result">
+        <div class="alert alert-success text-center" role="alert">
+            <div>
+                <h4 id="total">คะแนนรวมของคุณคือ : XXX</h4>
+                <h5 id="grade">ผลการเรียนที่ได้ : A</h5>
+                <p id="detail">ผลการเรียนของคุณอยู่ในระดับที่ดีมาก พยายามต่อไป</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+            <div>
+                <h5>เงื่อนไขการแปลงคะแนนเกรด</h5>
+                <pre>ถ้าคะแนนมากกว่า 80 คะแนนขึ้นไป จะได้เกรด A 
+ถ้าคะแนนมากกว่า 70-80 คะแนน จะได้เกรด B
+ถ้าคะแนนมากกว่า 60-70 คะแนน จะได้เกรด C
+ถ้าคะแนนมากกว่า 50-60 คะแนน จะได้เกรด D
+ถ้าคะแนนน้อยกว่า 50 คะแนน จะได้เกรด F </pre>
+                    <p>โดยที่คะแนนรวม เกิดจาก คะแนนของการสอบกลางภาค รวมกับ คะแนนการสอบปลายภาค และรวมกับ คะแนนจิตพิสัยในการร่วมชั้นเรียน</p>
+            </div>
+        </div>
+
+        <footer class="align-items-center py-3 my-4 border-top text-center"> 
+               © จัดทำโดย นายอิทธิพล สมเสมอ รหัสนักศึกษา 630112418061 <br>
+               รายวิชาการพัฒนาซอฟต์แวร์ด้วยเทคโนโลยี Front-End ภาคเรียนที่ 1 ปีการศึกษา 2568
+        </footer>
+
+    </div>
+
+    <script src="/script.js"></script>
+    
+</body>
+</html>
